@@ -1,0 +1,58 @@
+@mixin sm {
+  @media (max-width: 543px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 768px) and (min-width: 544px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+.hero--banner {
+  border-bottom: none;
+  padding-bottom: 1.25rem;
+  background-color: #efefef;
+  &__content {
+    &__details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: static;
+      transform: translateY(50px);
+      @include sm {
+        transform: translateY(25px);
+      }
+    }
+    &__title {
+      @include lg {
+        transform: none;
+      }
+      & p {
+        margin-bottom: 0;
+        @include md {
+          font-size: 30px;
+        }
+        @include sm {
+          color: #333;
+        }
+      }
+    }
+    &__buttons {
+      @include lg {
+        transform: none;
+      }
+      & .btn {
+        @include md {
+          font-size: 25px;
+          padding: 1rem 2rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+}

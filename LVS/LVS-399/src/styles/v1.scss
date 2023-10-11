@@ -1,0 +1,264 @@
+@mixin xl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 980px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+.progress-navigation {
+  &__receipt-inner {
+    padding: 1.5rem 2.5rem 1.875rem;
+  }
+  &__logo img {
+    width: 140px;
+  }
+}
+
+.step--receipt {
+  & .receipt__heading {
+    grid-row: 1 !important;
+    grid-column: 1/span 8 !important;
+  }
+  & .upgrade__suite {
+    grid-row: 3 !important;
+    grid-column: 1/span 8 !important;
+    & img {
+      width: 100%;
+    }
+    &__header {
+      margin-bottom: 60px;
+      &__copy {
+        text-align: center;
+        & h3 {
+          font-size: 25px;
+          line-height: 1;
+          margin: 15px 0;
+        }
+        & p {
+          font-size: 16px;
+          margin: 15px 0;
+        }
+        & button {
+          background: #db2000;
+          padding: 15px 45px;
+          & a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    &__body {
+      &__header {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1;
+        & h3 {
+          margin: 10px 0;
+          font-weight: 900;
+        }
+      }
+      &__images {
+        &__img {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          & img {
+            filter: brightness(0.85);
+          }
+          & span {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+  & .receipt__suite {
+    grid-row: 2 !important;
+    grid-column: 1/span 8 !important;
+    margin-bottom: 80px;
+    &--heading {
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+  & .receipt__cta--print {
+    background: #fff !important;
+    color: #db2000 !important;
+    &-inner {
+      &__icon {
+        display: none;
+      }
+      &__text {
+        margin-left: 0 !important;
+        font-size: 14px !important;
+      }
+    }
+  }
+  & .receipt__actions {
+    grid-row: 4 !important;
+    grid-column: 1/span 8 !important;
+    &__link {
+      display: flex;
+      flex-direction: column;
+      background: #f9f7f5;
+      text-decoration: none;
+      padding-bottom: 20px;
+      &__img {
+        & img {
+          width: 100%;
+          display: block;
+        }
+      }
+      &__copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__text {
+          padding: 5px 15px;
+          & p {
+            color: #2c2c2c;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.2;
+          }
+        }
+        &__button {
+          background: #373F56;
+          color: #fff;
+          padding: 15px 45px;
+          width: fit-content;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@include md {}
+
+@include lg {
+  .progress-navigation__receipt-inner {
+    padding: 3.125rem 2.5rem 1.875rem;
+  }
+  .step--receipt {
+    & .receipt__heading {
+      grid-row: 1 !important;
+      grid-column: 2/span 14 !important;
+    }
+    & .upgrade__suite {
+      grid-row: 2 !important;
+      grid-column: 2/span 7 !important;
+      &__header {
+        display: flex;
+        &__img {
+          width: 50%;
+          margin-right: 25px;
+          & img {
+            width: 100%;
+          }
+        }
+        &__copy {
+          text-align: left;
+          width: 50%;
+          h3 {
+            margin-top: 0;
+            font-size: 18px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+      &__body {
+        &__header {
+          & img {
+            margin-right: 20px;
+          }
+        }
+        &__images {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          position: relative;
+          margin-bottom: 10px;
+          &__img {
+            width: 49%;
+            & img {
+              width: 100%;
+            }
+            & span {
+              position: absolute;
+              line-height: 1;
+              bottom: 20px;
+              left: 10px;
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    & .receipt__suite {
+      grid-row: 2 !important;
+      grid-column: 10/span 6 !important;
+      margin-bottom: 0;
+    }
+    & .receipt__actions {
+      grid-row: 3 !important;
+      grid-column: 2/span 14 !important;
+      width: 100%;
+      &__link {
+        flex-direction: row;
+        padding-bottom: 0;
+        &__img {
+          display: block;
+          min-height: 100px;
+        }
+        &__copy {
+          flex-direction: row;
+          padding: 0 25px;
+          &__text {
+            padding: 0;
+            margin-right: 25px;
+            & p {
+              text-align: left;
+              font-weight: 500;
+            }
+          }
+          &__button {
+            white-space: nowrap;
+            padding: 10px 45px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@include xl {}

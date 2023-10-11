@@ -1,0 +1,118 @@
+.product-options .color li a,
+.product-variations .color li a {
+  @media (min-width: 65rem) {
+    width: 2rem;
+  }
+}
+.product-options .swatches li a,
+.product-variations .swatches li a {
+  border: unset;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+}
+.product-options .swatches li.selected a,
+.product-variations .swatches li.selected a {
+  border-color: #454647;
+}
+.product-options .color li a img,
+.product-variations .color li a img {
+  max-height: 38px;
+}
+.timex .pdp-main .product-options,
+.timex .pdp-main .product-variations {
+  border-top: 1px solid #e6e6e6;
+}
+.timex .pdp-main .product-variations {
+  padding-top: .3125rem;
+}
+.product-info,
+.product-downloads {
+  display: none;
+}
+.pdp-main .product-add-to-cart {
+  overflow: hidden;
+  max-width: 364px;
+  padding: 1em 0 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 0;
+}
+.pdp-main .product-add-to-cart .wishlist-link{
+  display: none;
+}
+.timex .pdp-main .product-add-to-cart button {
+  background-color: #c71339;
+}
+.timex .pdp-main .product-add-to-cart #add-to-cart:hover {
+  background-color: #666 !important;
+}
+.timex .pdp-main .availability-web p.high-stock,
+.timex .pdp-main .availability-web p.not-available-msg.hide-msg {
+  display: block;
+}
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pdp-main .product-actions:after {
+  display: none;
+}
+.product-actions .wishlist-link img {
+  display: none;
+}
+.tin__product-info {
+  display: flex;
+  & .product-feature-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  & .product-info-left {
+    padding: 0 15px;
+  }
+  & .product-short-desc {
+    margin-top: 1.875rem;
+  }
+  & .product-info-tabs {
+    margin-top: 3.125rem;
+  }
+  & .product-feature-item {
+    @media (min-width: 48rem) {
+      float: left;
+      width: 50%;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      & img {
+        left: 0;
+        margin-right: 1.25rem;
+        width: 40px;
+        height: 40px;
+        position: static;
+        top: unset;
+        transform: translateY(0);
+      }
+      & label {
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        color: #000;
+        font-weight: 500;
+        line-height: 1.306rem;
+        font-family: Gotham Narrow A,Gotham Narrow B,Arial,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: .963rem;
+        padding-left: 0;
+        position: static;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 767px) {
+      margin: 10px 0;
+    }
+  }
+  & .product-downloads {
+    display: block;
+    border-top: 1px solid #e6e6e6;
+  }
+}

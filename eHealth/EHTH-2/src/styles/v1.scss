@@ -1,0 +1,26 @@
+.navbar {
+  position: initial;
+}
+.tin__footer {
+  position: sticky;
+  bottom: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3a5eba;
+  padding: 15px;
+  transition: all 300ms ease-in;
+  &.active {
+    bottom: 0;
+  }
+  & .navbar-brand {
+    max-width: 70px;
+    margin-right: 0;
+  }
+  &__btn span {
+    color: white;
+    font-weight: 700;
+    background: #1ca78e;
+    padding: 7px 60px;
+  }
+}

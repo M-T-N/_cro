@@ -1,0 +1,70 @@
+@mixin lg {
+  @media (min-width: 1050px) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: TideSans300;
+  src: url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-300LilKahuna.woff2") format('woff2'), url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-300LilKahuna.woff") format('woff'), url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-300LilKahuna.ttf") format('truetype');
+  font-display: auto;
+}
+
+@font-face {
+  font-family: TideSans700;
+  src: url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-700Mondo.woff2") format('woff2'), url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-700Mondo.woff") format('woff'), url("https://lc82q4e9c5e28cc893zl5dbo-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/TideSans-700Mondo.ttf") format('truetype');
+  font-display: auto;
+}
+
+.whats-on-hero .woh-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.woh-pricing-copy {
+  max-width: 670px;
+  background-color: #ffffff80;
+}
+
+.netflix-form__wrap {
+  position: relative;
+  height: 60px;
+  & input[type="email"] {
+    height: 60px;
+    background: #fff 0 0 no-repeat padding-box;
+    border-radius: 20px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 300px;
+    font-size: 17px;
+    font-family: TideSans300;
+    color: #979797 !important;
+    line-height: 22px;
+    box-shadow: inset 0 1px 3.5px rgba(0,0,0,0.46);
+  }
+  & input[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #0000 -webkit-gradient(linear, left top, left bottom, from(#D88F53), to(#DB634D)) 0 0 no-repeat padding-box;
+    background: transparent -o-linear-gradient(top, #D88F53 0%, #DB634D 100%) 0 0 no-repeat padding-box;
+    background: #0000 linear-gradient(180deg, #D88F53 0%, #DB634D 100%) 0 0 no-repeat padding-box;
+    -webkit-box-shadow: 0 3px 5px #00000033;
+    box-shadow: 0 3px 5px #00000033;
+    border-radius: 20px;
+    border: none;
+    font-family: TideSans700;
+    color: #fff;
+    height: 100%;
+    width: 300px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  & span {
+    font-family: TideSans300, sans-serif;
+    color: #303672;
+    font-size: 18px;
+  }
+}

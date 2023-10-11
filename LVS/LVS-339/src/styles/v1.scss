@@ -1,0 +1,45 @@
+.mod-quick-facts__container {
+  @media (min-width: 1400px) {
+    padding: 27px 20px 23px !important;
+  }
+
+  @media (max-width: 1020px) {
+    display: block;
+    bottom: -205px !important;
+  }
+
+  &>li:not(:last-of-type) {
+    @media (max-width: 1020px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.mod-quick-facts__container .separator {
+  @media (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.mod-quick-facts__group-dining {
+  display: flex;
+  cursor: pointer;
+
+  &:hover {
+    color: #db2000;
+  }
+
+  & img {
+    width: 20px;
+  }
+}
+
+.mod-about {
+  @media (max-width: 1020px) {
+    margin-top: 220px;
+  }
+}
+
+.interstitial-info .mod-interstitial-info__column-wrapper.hide-on-fd:nth-of-type(3) ul .o-h10 {
+  margin: 15px 0;
+}

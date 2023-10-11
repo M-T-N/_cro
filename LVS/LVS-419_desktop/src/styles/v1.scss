@@ -1,0 +1,190 @@
+@mixin xl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 980px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+.mod-offers-listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* Featured */
+  &__featured {
+    margin-bottom: 60px;
+    &__header {
+      margin-bottom: 25px;
+      font-size: 38px;
+      font-weight: 300;
+      font-family: Avenir, sans-serif;
+    }
+    &--wrap {
+      display: flex;
+    }
+    &__media {
+      flex: unset;
+      width: 52%;
+      & figure {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    & .o-offer {
+      &__text {
+        flex: unset;
+        width: 48%;
+        & .mod-offers-listing__buttons {
+          display: flex;
+          padding-top: 25px;
+          list-style: none;
+          align-items: center;
+          & li:nth-of-type(1) {
+            width: 50%;
+            margin-right: 20px;
+          }
+          & li:nth-of-type(2) {
+            width: 50%;
+            white-space: nowrap;
+            & a {
+              padding: 18px 14px;
+              & span {
+                color: #db2000;
+                text-decoration: underline;
+              }
+              & svg {
+                color: #db2000;
+              }
+            }
+          }
+        }
+      }
+      &__tagline {
+        font-size: 40px;
+        font-family: Avenir, sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        line-height: 1;
+        & a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+      &__divider {
+        width: 150px;
+        height: 5px;
+        display: inline-block;
+        background: #db2000;
+        margin-bottom: 15px;
+      }
+      &__text__details {
+        line-height: 2;
+        &__item {
+          font-size: 15px;
+          & .bold {
+            font-weight: 900;
+            font-size: calc(100% + 1px);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  &--group {
+    /*main cards*/
+    max-width: 1280px;
+    &-wrapper {
+      background-color: #f9f7f5;
+      padding: 0 32px;
+      margin: 0;
+      max-width: unset;
+      display: flex;
+      justify-content: center;
+    }
+    &__toggle {
+      overflow: unset;
+      &.active span {
+        height: auto
+      }
+    }
+    &__category {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+      & .mod-offers-listing--item {
+        background-color: #f9f7f5;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100% !important;
+        //height: calc(100% - 70px);
+        margin: 0 !important;
+        display: flex;
+        &>a {
+          width: 95%;
+          display: inline-block;
+          position: relative;
+          & figure {
+            z-index: 20;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 90%;
+            bottom: 0;
+            left: -45px;
+            background-color: white;
+            z-index: 10;
+          }
+        }
+        & .o-offer {
+          &__text {
+            width: 95%;
+            padding: 26px 20px 17px 5%;
+            align-self: flex-start;
+            transform: translateY(-70px);
+            z-index: 30;
+            justify-content: space-between;
+            height: calc(100% + 60px);
+            flex-grow: 1;
+            &__collapsible {
+              border-top: none;
+            }
+            & .mod-offers-listing__buttons {
+              & .cta--arrow {
+                width: unset;
+                margin-right: 30px;
+              }
+              & .o-offer__cta {
+                width: unset;
+                margin: 0;
+                & svg {
+                  display: none;
+                }
+              }
+            }
+          }
+          &__divider {
+            &--mobile {
+              display: none;
+            }
+            &--desktop {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

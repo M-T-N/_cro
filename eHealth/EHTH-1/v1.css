@@ -1,0 +1,8 @@
+.tin-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tin-reviews > * {
+  flex: 0 1 150px;
+}

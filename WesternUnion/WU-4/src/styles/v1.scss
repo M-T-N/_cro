@@ -1,0 +1,26 @@
+.pad-sm-vert {
+  padding: 12px 8px;
+  font-family: Euclid WU,Noto Sans,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.d-flex {
+  display: flex;
+  text-align: left;
+}
+.close_btn {
+  width: 16px;
+  display: flex;
+  align-items: center;
+
+}
+.banner-msg {
+  width: calc(100% - 171px);
+}
+.app-download {
+  height: 32px;
+  font-size: 13px;
+  min-width: 30%;
+  background-color: #000;
+  border-radius: 999px;
+}

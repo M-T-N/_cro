@@ -1,0 +1,94 @@
+$desktop: 601px;
+$mobile: 600px;
+
+#cartSearchSummarized {
+  align-items: center;
+}
+#staydates {
+  flex: 2;
+  padding-right: 10px;
+}
+#guestsrooms {
+  flex: 2;
+}
+#cartSearchSummarized>div:last-child {
+  flex: 1;
+  display: flex;
+}
+.l-room-results-container .l-display-flex.l-margin-top-three-quarters {
+  background: #fff;
+}
+.l-exclusion-disclaimer p {
+  font-size: .875rem;
+  color: #1c1c1c;
+  font-weight: 500;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+}
+.tin--best-rate {
+  &__tab {
+    display: flex;
+    align-items: center;
+    transform: translateX(-20px);
+    cursor: pointer;
+    & picture {
+      transform: translateY(7px);
+      & img {
+        width: 50px;
+      }
+    }
+    &__text {
+      & p {
+        white-space: nowrap;
+        margin: 0;
+        color: #b84c16;
+        font-weight: 600;
+        & .mobile-break {
+          @media (min-width: $desktop) {
+            display: none;
+          }
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      background: #fff;
+      padding-top: 13px;
+      transform: translateX(0px);
+      & picture {
+        transform: translateY(10px);
+        & img {
+          width: 75px;
+        }
+      }
+      &__text {
+        transform: translateX(-15px);
+      }
+    }
+  }
+}
+.tin-modal {
+  &.mfp-wrap {
+    & .mfp-content {
+      & h2 {
+        font-size: 1.5rem;
+      }
+      & li {
+        margin-bottom: 1rem;
+        & a {
+          color: #000;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.price-toggle-container {
+  @media (max-width: $mobile) {
+    text-align: left;
+  }
+  & label::before {
+    @media (max-width: 457px) {
+      top: 0.5rem !important;
+    }
+  }
+}

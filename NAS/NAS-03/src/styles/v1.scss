@@ -1,0 +1,58 @@
+$mobile: 767px;
+
+.page__main > .form {
+  padding: 0;
+  form[data-formid="1236"] {
+    background: linear-gradient(110deg,#903393,#E6BF5C);
+    padding: 40px 30px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-family: "nudista-web",Helvetica,Arial,sans-serif;
+      font-size: 28px;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+    }
+    .form-fields {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      .left, .right {
+        width: 48%;
+      }
+    }
+    .mktoButtonRow {
+      max-width: 300px;
+    }
+  }
+  .form__success-msg {
+    background: linear-gradient(110deg,#903393,#E6BF5C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      padding: 40px 0;
+    }
+  }
+}
+@media (max-width: $mobile) {
+  .page__main > .form {
+    form[data-formid="1236"] {
+      padding: 25px 30px !important;
+      h2 {
+        font-size: 20px;
+      }
+      .form-fields {
+        flex-direction: column;
+        .left, .right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

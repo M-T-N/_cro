@@ -1,0 +1,73 @@
+/*ven382 changes*/
+
+/* bigger icons */
+.mod-room-detail-hero--content .mod-room-detail-hero-item .description li::before {
+  height: 42px !important;
+  width: 42px !important;
+  margin-left: -55px !important;
+  top: -8px !important;
+}
+
+@media (max-width: 639px) {
+  .mod-room-detail-hero--content .mod-room-detail-hero-item .description {
+    padding-left: 56px !important;
+  }
+
+  .mod-room-detail-hero--content .mod-room-detail-hero-item .description li::before {
+    height: 37px !important;
+    width: 37px !important;
+    top: -5px !important;
+  }
+}
+
+.mod-room-detail-hero-item li[role="listitem"] {
+  cursor: pointer;
+}
+
+.mod-room-detail-hero--content .mod-room-detail-hero-item .description li:nth-child(3)::before {
+  margin-left: -53px !important;
+}
+
+@media (min-width: 640px) {
+  .mod-room-detail-hero--content .mod-room-detail-hero-item .description {
+    margin: 45px 0 35px !important;
+  }
+}
+
+.mod-room-detail-hero--content .mod-room-detail-hero-item .description li {
+  margin-bottom: 25px;
+}
+
+
+.mod-room-detail-hero--content .mod-room-detail-hero--group .mod-room-detail-hero-item--medium .mod-room-detail-hero-item__media:before {
+  display: none !important;
+}
+
+/* slick slider */
+.o-small-gallery__controls .slick-prev {
+  z-index: 100;
+  top: unset;
+  left: 50%;
+  bottom: 2%;
+  margin-left: -73px;
+}
+
+.o-small-gallery__controls .slick-next {
+  z-index: 100;
+  top: unset;
+  right: 50%;
+  bottom: 2%;
+  margin-right: -73px;
+}
+
+.o-small-gallery__controls .slick-next:before,
+.o-small-gallery__controls .slick-prev:before {
+  content: unset;
+}
+
+.o-small-gallery__controls button svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke-width: 4;
+}

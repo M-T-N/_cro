@@ -1,0 +1,65 @@
+$mobile: 47.96875rem;
+
+/*Homepage*/
+.search__flexible_date--info--hp {
+  position: absolute;
+  color: #707070;
+  padding-left: 1.875rem;
+  transform: translateY(3px);
+
+  @media (max-width: $mobile) {
+    padding-left: 1.7rem;
+    transform: translateY(-3px);
+  }
+}
+
+.search-form-body .search__flexible_date--info--hp {
+  @media (max-width: $mobile) {
+    position: static;
+    padding-left: 0;
+    transform: none;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .MuiPaper-root .search-dates-popup__main>div:nth-child(2) {
+    height: 70px;
+  }
+
+  .search-dates-popup__main>div:nth-child(2) {
+    height: 4.8rem;
+  }
+}
+
+
+/* SRP Header */
+.tile-search-summary .t-is-visible-m {
+  width: 100%;
+}
+
+
+/*SRP Dropdown*/
+.search__flexible_date--info--srp {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 2px;
+
+  @media (max-width: $mobile) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+#staydates .search__flexible_date--info--srp {
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.m-field-control.m-date-picker.l-date-picker .field-title {
+  @media (max-width: $mobile) {
+    display: inline-block;
+  }
+}

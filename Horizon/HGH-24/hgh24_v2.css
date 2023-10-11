@@ -1,0 +1,25 @@
+#Mainstage .coupons-wrapper .list {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  #Mainstage .coupons-wrapper .copy {
+    width: 60%;
+  }
+}
+
+#Mainstage .coupons-wrapper .copy p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+#Mainstage .coupons-wrapper>a {
+  height: fit-content;
+}
+
+@media (max-width: 1000px) {
+  #Mainstage .info .coupons-wrapper {
+    flex-direction: column;
+  }
+}

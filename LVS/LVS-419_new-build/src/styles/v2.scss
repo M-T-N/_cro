@@ -1,0 +1,293 @@
+@mixin xl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @mixin lg {
+    @media (min-width: 980px) {
+      @content;
+    }
+  }
+  @mixin md {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  
+  .mod-offers-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    /* Featured */
+    &__featured {
+			max-width: 1280px;
+			display: flex;
+			flex-direction: column;
+			clear: both;
+			width: auto;
+			margin: 0 auto 80px;
+      &__header {
+        margin-bottom: 25px;
+        font-size: 38px;
+        font-weight: 300;
+        font-family: Avenir, sans-serif;
+      }
+      &--wrap {
+        display: flex;
+      }
+      &__media {
+        flex: unset;
+        width: 52%;
+        & figure {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      & .o-offer {
+        &__text {
+          flex: unset;
+          width: 48%;
+          & .mod-offers-listing__buttons {
+            display: flex;
+            padding-top: 25px;
+            list-style: none;
+            align-items: center;
+            & li:nth-of-type(1) {
+              width: 50%;
+              margin-right: 20px;
+            }
+            & li:nth-of-type(2) {
+              width: 50%;
+              white-space: nowrap;
+              & a {
+                padding: 18px 14px;
+                & span {
+                  color: #db2000;
+                  text-decoration: underline;
+                }
+                & svg {
+                  color: #db2000;
+                }
+              }
+            }
+          }
+        }
+        &__tagline {
+          font-size: 40px;
+          font-family: Avenir, sans-serif;
+          letter-spacing: 1px;
+          margin-bottom: 15px;
+          line-height: 1;
+          & a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+        &__divider {
+          width: 150px;
+          height: 5px;
+          display: inline-block;
+          background: #db2000;
+          margin-bottom: 15px;
+        }
+        &__text__details {
+          line-height: 2;
+          &__item {
+            font-size: 15px;
+            & .bold {
+              font-weight: 900;
+              font-size: calc(100% + 2px);
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    &--group {
+			/*main cards*/
+			max-width: 1280px;
+			&--wrap:nth-of-type(2) {
+				margin-bottom: 80px;
+			}
+			&__toggle {
+				overflow: unset;
+				margin-bottom: 40px;
+				&.active span {
+					height: auto
+				}
+			}
+			&-wrapper {
+				padding: 0 60px;
+				margin: 0;
+				max-width: unset;
+				display: flex;
+				justify-content: center;
+			}
+			&__header {
+				font-size: 30px;
+				font-weight: 300;
+			}
+			&__category {
+				display: grid;
+				grid-template-columns: 1fr;
+				row-gap: 30px;
+				margin-bottom: 80px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				& .mod-offers-listing--item {
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					width: 100% !important;
+					margin: 0 !important;
+					border-bottom: 1px solid #d8dee1;
+					min-height: 200px;
+					overflow: hidden;
+					&:last-child {
+						border-bottom: none;
+					}
+					&>a {
+						width: 30%;
+						display: inline-block;
+						padding-bottom: 17px;
+					}
+					& .o-offer {
+						&__media {
+							background-color: #000;
+							line-height: 0;
+							width: 100%;
+							margin: 0;
+							overflow: hidden;
+							position: relative;
+							&::before {
+								display: block;
+								content: "";
+								width: 100%;
+								padding-top: 66.66667%;
+							}
+							&::after {
+								display: block!important;
+								content: '';
+								position: absolute;
+								top: 0;
+								left: 0;
+								z-index: 0;
+								background-color: rgba(0,0,0,.15);
+								width: 100%;
+								height: 100%;
+								transition: background-color linear 1500ms;
+							}
+							& .img-normal-size {
+								position: absolute;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								& img {
+									width: 100%;
+									transform: scale3d(1,1,1);
+									height: 100%;
+									object-fit: cover;
+								}
+							}
+							& .img-large-size {
+								display: none;
+							}
+							& h3 {
+								display: none;
+							}
+						}
+						&__text {
+							width: 70%;
+							flex-direction: row;
+							padding: 0px 20px 17px;
+							display: flex;
+							align-items: flex-start;
+							align-self: flex-start;
+							justify-content: space-between;
+							&__title {
+								margin-right: 40px;
+								margin-bottom: 0;
+								display: flex;
+								flex-direction: column;
+								& .o-offer__tagline {
+									font-size: 26px;
+									text-align: left;
+									font-weight: 400;
+									line-height: 1.1;
+									margin-bottom: 20px;
+									text-transform: none;
+									font-family: Avenir, sans-serif;
+								}
+							}
+							&__offerDetails {
+								& .bold {
+									font-weight: 900;
+								}
+							}
+							&__collapsible {
+								border-top: none;
+								padding: 0;
+								display: block;
+								width: 100%;
+							}
+							&__details {
+								min-width: 237px;
+								width: unset;
+								line-height: 2;
+								&__item {
+									& .bold {
+										font-weight: 900;
+										font-size: calc(100% + 1px);
+										margin-right: 5px;
+									}
+									& br {
+										display: block;
+									}
+									&--mobile {
+										display: none;
+									}
+								}
+							}
+							& .mod-offers-listing__buttons {
+								display: flex;
+								flex-direction: column;
+								width: 100%;
+								padding-top: 25px;
+								& .cta--arrow {
+									width: unset;
+									margin-right: 30px;
+									margin-bottom: 10px;
+								}
+								& .o-offer__cta {
+									width: unset;
+									margin: 0;
+									text-align: left;
+									padding: 18px 0;
+									color: #db2000;
+									& span {
+										text-decoration: underline;
+										font-weight: 900;
+									}
+									& svg {
+										display: none;
+									}
+								}
+							}
+						}
+						&__divider {
+							&--mobile {
+								display: none;
+							}
+							&--desktop {
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+  }

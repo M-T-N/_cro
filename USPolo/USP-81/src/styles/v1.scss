@@ -1,0 +1,14 @@
+#mobile_menu > .mobile-mega-menu-parent > a {
+  display: flex;
+  align-items: center;
+}
+
+#mobile_menu > .mobile-mega-menu-parent > a > .icon-down-arrow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}

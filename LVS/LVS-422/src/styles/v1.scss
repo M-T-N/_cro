@@ -1,0 +1,317 @@
+@mixin xl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 980px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+
+
+
+.flexible-detail-page {
+  & .offers-details-v2 {
+    font-family: Avenir, sans-serif;
+    // hero
+    & .offer-details__fixed {
+      margin-bottom: 20px;
+      & .offers-sticky-container {
+        display: none;
+      }
+      & .offers-hero {
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 30px 0px 40px;
+        &__image {
+          height: 100%;
+        }
+        &__title {
+          margin-bottom: 5px;
+        }
+        &__nights {
+          margin-bottom: 35px;
+          & p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1;
+          }
+          ;
+        }
+        &__cta {
+          margin-bottom: 0px;
+        }
+        &__divider {
+          display: none;
+        }
+      }
+    }
+    // main content
+    .offer-details__flexible {
+      max-width: 1040px;
+      margin: 0 auto;
+      & .offers-column {
+        padding: 0 30px;
+        &__header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 50px;
+          &__calendar {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            & .calendar-icon {
+              background: url("	https://www.venetianlasvegas.com/etc/clientlibs/venetian-loyalty/img/icons/offers-calendar-icon.svg") no-repeat center center;
+              margin: 0 auto 15px;
+              height: 25.5px;
+              width: 24px;
+              display: inline-block;
+            }
+            &__dates {
+              font-weight: 900;
+              font-size: 20px;
+            }
+          }
+          &__expire {
+            & p {
+              font-size: 16px;
+              font-weight: 900;
+              color: #DB2000;
+            }
+          }
+          &__save {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          &__details {
+            width: 100%;
+            margin-bottom: 30px;
+            & ul {
+              list-style: none;
+              & li {
+                font-size: 20px;
+                font-weight: 900;
+                padding: 15px 0;
+                border-bottom: 1px solid #d8dee1;
+                margin-bottom: 0;
+              }
+            }
+          }
+          &__intro {
+            &__header {
+              font-weight: 900;
+              margin-bottom: 10px;
+              & h3 {
+                font-size: 26px;
+                font-family: Avenir, sans-serif;
+                font-weight: 900;
+              }
+            }
+            &__copy {
+              & p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        &__body {
+          .offers-details__rich-text {
+            margin: 0 0 30px;
+          }
+        }
+      }
+      & .sticky-highlights--wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// desktop
+@include lg {
+  .flexible-detail-page {
+    & .offers-details-v2 {
+      // hero 
+      .offer-details__fixed {
+        .offers-hero {
+          row-gap: 0;
+          padding: 50px 0 60px;
+          &__title {
+            margin-bottom: 5px;
+          }
+          &__nights {
+            margin-bottom: 50px;
+            & p {
+              color: #fff;
+              font-family: Avenir;
+              font-size: 25px;
+              line-height: 1;
+            }
+          }
+          &__cta {
+            margin-top: 0;
+          }
+        }
+      }
+      // main content
+      & .offer-details__flexible {
+        padding: 0px 30px;
+        position: relative;
+        & .offers-column {
+          width: 55%;
+          padding: 0px;
+          &__header {
+            align-items: flex-start;
+            &__calendar {
+              flex-direction: row;
+              margin-bottom: 0px;
+              & .calendar-icon {
+                margin: 0 14px 0 0;
+              }
+            }
+            &__expire {
+              margin-bottom: 40px;
+              transform: translateX(40px);
+            }
+            &__details {
+              display: none;
+            }
+            &__save {
+              display: none;
+            }
+            &__intro {
+              &__header {
+                margin-bottom: 15px;
+                h3 {
+                  font-size: 34px;
+                  & b {
+                    line-height: 1;
+                  }
+                }
+              }
+              &__copy {
+                border-bottom: 1px solid #d8dee1;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                & p {
+                  line-height: 1.4;
+                }
+              }
+            }
+          }
+        }
+        & .sticky-highlights--wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 40%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          & .sticky-highlights {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            border: 1px solid #d8dee1;
+            padding: 30px 20px;
+            &__header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 15px;
+              & h4 {
+                font-size: 18px;
+                text-transform: none;
+                color: #2c2c2c;
+              }
+            }
+            &__details {
+              margin-bottom: 25px;
+              & ul {
+                list-style: none;
+                & li {
+                  font-size: 18px;
+                  font-weight: 900;
+                  padding: 15px 0;
+                  border-bottom: 1px solid #d8dee1;
+                  margin-bottom: 0;
+                }
+              }
+            }
+            &__booking {
+              &__button-clone {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+                & a {
+                  margin-bottom: 0;
+                }
+              }
+              &__divider {
+                display: flex;
+                justify-content: center;
+                border-top: 1px solid #d8dee1;
+                & span {
+                  transform: translateY(-13px);
+                  background: #fff;
+                  padding: 0 15px;
+                }
+              }
+              &__contact {
+                &__host {
+                  display: grid;
+                  grid-template-columns: 2fr 1fr;
+                  & h5 {
+                    font-family: Avenir, sans-serif;
+                  }
+                  &__header {
+                    & h5 {
+                      color: #85898b;
+                    }
+                  }
+                  &__info {
+                    & h5,
+                    a {
+                      color: #2c2c2c;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

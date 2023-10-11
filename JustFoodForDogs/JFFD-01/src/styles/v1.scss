@@ -1,0 +1,87 @@
+@mixin sm {
+  @media (max-width: 543px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 768px) and (min-width: 544px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+.hero--banner {
+  border-bottom: none;
+  padding-bottom: 1.25rem;
+  background-color: #efefef;
+  &__desktop {
+    & img {
+      transform: scaleX(-1);
+    }
+  }
+  &__content {
+    &__details {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: static;
+      @include lg {
+        padding: 0 0 0 15%;
+      }
+      @include md {
+        padding: 0 0 0 5%;
+      }
+      @include sm {
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 10px;
+      }
+    }
+    &__title {
+      @include lg {
+        transform: translateY(-80px);
+      }
+      & p {
+        color: #212529;
+        margin-bottom: 0;
+        @include md {
+          font-size: 30px;
+        }
+      }
+    }
+    &__buttons {
+      @include lg {
+        transform: translateY(-80px);
+      }
+      & .btn {
+        @include md {
+          font-size: 25px;
+          padding: 1rem 2rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+    &__subtext {
+      position: absolute;
+      bottom: 22px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #212529;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 1.2;
+      @include md {
+        font-size: 14px;
+      }
+      @include sm {
+        font-size: 13px;
+        bottom: 5px;
+      }
+    }
+  }
+}

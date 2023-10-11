@@ -1,0 +1,19 @@
+.tin_email {
+  display: flex;
+  justify-content: center;
+  & .netflix-form__wrap {
+    max-width: 646px;
+    & > [type="email"] {
+      width: unset;
+      @media (max-width: 767px) {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    & > [type="submit"] {
+      @media (max-width: 1024px) {
+        width: 300px;
+      }
+    }
+  }
+}

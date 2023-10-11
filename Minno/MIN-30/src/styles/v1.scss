@@ -1,0 +1,139 @@
+@mixin mobileScreen {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+#hero {
+  background-image: url('https://i.imgur.com/7Rc4N6K.jpg') !important;
+  padding: 60px 3rem 0;
+
+  @include mobileScreen {
+    background-image: url('https://i.imgur.com/NnpQgrT.jpg') !important;
+    padding: 30px 2rem 0;
+    display: flex;
+    align-items: flex-start;
+    background-position: bottom;
+    min-height: 670px;
+  }
+}
+
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+    @include mobileScreen {
+      width: 100%;
+      align-items: center;
+    }
+
+    &__logo {
+      margin-bottom: 15px;
+
+      @include mobileScreen {
+        align-self: flex-start;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__header {
+      & h2 {
+        font-size: 55px;
+        line-height: 1.2;
+        color: #303672;
+
+        @include mobileScreen {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__copy {
+      & p {
+        font-size: 25px;
+        color: #303672;
+
+        @include mobileScreen {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        & span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__cta {
+      & a {
+        background: #E06B52;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 900;
+        margin-bottom: 50px;
+
+        @include mobileScreen {
+          width: 250px;
+          font-size: 20px;
+          padding: 10px 15px;
+
+          & img {
+            width: 25px;
+          }
+        }
+      }
+
+      & img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.tin-join {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 30px;
+
+  &--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+    max-width: 1070px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: 861px) {
+    &__cta {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 860px) {
+    &--wrapper {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
+    &__cta {
+      margin-bottom: 30px;
+
+      &--wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

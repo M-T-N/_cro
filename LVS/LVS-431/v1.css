@@ -1,0 +1,35 @@
+.step-confirmation__offer-detail {
+	padding: 15px 5px;
+	display: flex;
+	justify-content: space-between;
+	background: #f9f7f5;
+}
+.step-confirmation__offer-detail__heading {
+	width: 40%;
+	margin: 0;
+	font-family: Avenir;
+	font-weight: 900;
+	font-size: .8125rem;
+	line-height: 1.8;
+	letter-spacing: .03125rem;
+	color: #2c2c2c;
+	text-align: left;
+}
+.step-confirmation__offer-detail__heading span {
+	float: left;
+}
+.step-confirmation__offer-detail__heading span img {
+	width: 20px;
+	display: inherit;
+	margin-right: 5px;
+}
+.step-confirmation__offer-detail__info {
+	text-align: right;
+	width: 55%;
+}
+
+@media (min-width: 980px) {
+	.step-confirmation__offer-detail__heading {
+		font-size: .9375rem;
+	}
+}

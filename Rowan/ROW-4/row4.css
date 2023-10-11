@@ -1,0 +1,23 @@
+.base-lockup__social-proof {
+	display: flex;
+	justify-content: space-between;
+  gap: 15px;
+}
+.base-lockup__social-proof__item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.base-lockup__social-proof__item__stat {
+	color:#00009e;
+	font-family: rhode-wide,sans-serif;
+}
+.base-lockup__social-proof__item__divider {
+
+}
+.base-lockup__social-proof__item__source {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}

@@ -1,0 +1,50 @@
+.elementor-9 .elementor-element.elementor-element-baac388 > .elementor-element-populated {
+  margin-bottom: 0;
+}
+.hero-carousel-c-mobile .card-title {
+  padding: 10px 20px !important;
+}
+.hero-carousel-c-mobile .card-container {
+  margin-bottom: 10px;
+}
+div[data-id="7eede68"] a {
+  color: #fff;
+}
+div[data-id="fc972a3"] {
+  max-height: 250px;
+}
+.elementor-9 .elementor-element.elementor-element-e65f464 {
+  padding-top: 10px;
+  margin-bottom: 0;
+  & a {
+    color: #003A70;
+    font-weight: 800;
+  }
+}
+.card {
+  &-title {
+    display: flex;
+    padding: 0 20px !important;
+    align-items: center;
+    justify-content: space-between;
+    & .card-toggle {
+      & img {
+        width: 20px;
+        opacity: 1;
+        left: auto;
+        position: initial;
+        transform: none;
+      }
+    }
+  }
+  &-text {
+    max-height: 0;
+    transition: all 300ms ease-in;
+    &.active {
+      max-height: 500px;
+    }
+  }
+}
+#PureChatWidget.purechat.purechat-window .purechat-widget-header, #PureChatWidget.purechat.purechat-window .purechat-btn {
+  background-color: #003A70 !important;
+}

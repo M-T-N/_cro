@@ -1,0 +1,146 @@
+.tin-logos {
+  &-3 {
+    max-width: 700px;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 50px 0 30px;
+    @media (max-width: 1023px) {
+      margin-top: 30px;
+    }
+  }
+  &-4 {
+    max-width: 800px;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  &--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 75%;
+    }
+    & img[alt="iOS"] {
+      width: 35%;
+      transform: translate(30%, 10%);
+    }
+    & img[alt="Amazon Fire TV"], & img[alt="Google Play"] {
+      transform: translateY(10%);
+    }
+  }
+}
+.screentime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+  background-image: url('https://i.imgur.com/szzhGV2.jpg');
+  background-size: cover;
+  &__header {
+    text-align: center;
+    color: #fff;
+  }
+  &__info {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30px;
+    max-width: 1100px;
+    justify-content: space-between;
+    width: 100%;
+    &--vid {
+      width: 50%;
+      & .responsive-embed {
+        margin-bottom: 0;
+      }
+      & iframe {
+        border-radius: 15px;
+      }
+    }
+    &--text {
+      width: 45%;
+      padding-top: 20px;
+      font-family: 'var(--tide-7)';
+      color: var(--purple);
+      display: flex;
+      align-items: center;
+      & ul {
+        list-style: none;
+        margin-bottom: 0;
+        & li {
+          font-size: 20px;
+          &:nth-of-type(2) {
+            padding-left: 30px;
+          }
+          &:nth-of-type(3) {
+            padding-left: 40px;
+          }
+          &:nth-of-type(4) {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+  &__testimonial {
+    max-width: 600px;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+    font-size: 17px;
+    &--text {
+      margin-bottom: 10px;
+    }
+    &--author {
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 1023px) {
+    background-image: url('https://i.imgur.com/k3bjkL2.jpg');
+    &__info {
+      flex-direction: column;
+      align-items: center;
+      &--vid, &--text {
+        width: 90%;
+      }
+      &--text {
+        justify-content: center;
+        & ul {
+          text-align: center;
+          & li {
+            padding-left: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 640px){
+  .hero {
+    min-height: 600px;
+  }
+  .tin-logos {
+    margin-top: 30px;
+  }
+}
+.limited-img {
+  &--mobile {
+    width: 80%;
+  }
+  @media (min-width: 1024px) {
+    &--mobile {
+      display: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    & img {
+      padding-top: 50px;
+    }
+    &--desktop {
+      display: none;
+    }
+  }
+}

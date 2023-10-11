@@ -1,0 +1,31 @@
+.left-area {
+  & .top-logo {
+    display: flex;
+    justify-content: center;
+    & img {
+      max-width: 150px !important;
+      max-height: 75px;
+      margin: 0 !important;
+    }
+  }
+  & .cta-ezbook {
+    background: #02ac1e;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    & a {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      & span {
+        text-align: center;
+        line-height: 1;
+        color: white;
+        font-family: Lato, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    }
+  }
+}

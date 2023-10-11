@@ -1,0 +1,115 @@
+.tin_section {
+  & header {
+    border-top: 1px solid black;
+    position: relative;
+    & p {
+      padding: 20px 10px;
+      margin: 0; 
+    }
+    & .OffcanvasNav-chevron {
+      right: 20px;
+      border-top: 0.2rem solid #2d2d2d;
+      border-right: 0.2rem solid #2d2d2d;
+      transform: translateY(-65%) translateZ(0) rotate(45deg);
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &.collapsed {
+    & header {
+      & .OffcanvasNav-chevron {
+        transform: translateY(-65%) translateZ(0) rotate(135deg);
+      }
+    }
+    & .tin_section__content {
+      height: 0;
+      opacity: 0;
+      padding: 0;
+      pointer-events: none;
+      & * {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  &__opened {
+    padding-bottom: 30px;
+  }
+  &__reviews, &__everything-needed {
+    border-bottom: 1px solid black;
+  }
+  &__content {
+    padding: 0px 15px 20px;
+    transition: all 200ms ease-in;
+    height: 100%;
+    & .how_to_use_sec, & .diamond_difference_sec {
+      padding-top: 0;
+    }
+  }
+  & .product_small_title {
+    font-family: 'Red Hat Display';
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  & .how_to_use_block {
+    text-align: center;
+    & .title_text {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    & .icon_img {
+      margin-bottom: 15px;
+    }
+    & img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  & .tin__more-reviews {
+    padding-top: 30px;
+    & .okeReviews-reviews-review:first-of-type {
+      display: none;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+  &__about-artist.collapsed {
+    border-bottom: 1px solid black;
+  }
+  & .sec_pb {
+    @media (max-width: 767px) {
+      padding-bottom: 0px;
+    }
+  }
+}
+.okeReviews-reviewsAggregate-side, .okeReviews-reviewsAggregate-recommends, .okeReviews .okeReviews-reviewsAggregate-mod-itm.okeReviews-reviewsAggregate-mod-itm--attRtgAv, .ShapeCurve, .Product-artist {
+  display: none;
+}
+.okeReviews {
+  & .okeReviews-reviewsWidget-header {
+    margin-bottom: 1rem !important;
+  }
+  & .okeReviews-reviewsWidget-reviewsAggregate {
+    background: none;
+    margin-bottom: .5rem !important;
+  }
+  & .okeReviews-reviewsAggregate-mod {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  &-mediaStrip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  & .okeReviews-reviewsAggregate-mod-itm+.okeReviews-reviewsAggregate-mod-itm {
+    padding: 0;
+  }
+}

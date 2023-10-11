@@ -1,0 +1,35 @@
+#Mainstage .coupons-wrapper .list {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  #Mainstage .coupons-wrapper .list {
+    width: 60%;
+  }
+}
+
+#Mainstage .coupons-wrapper .list ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#Mainstage .coupons-wrapper .list ul li {
+  line-height: 1.2;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#Mainstage .coupons-wrapper .list ul li:last-child {
+  margin-bottom: 0;
+}
+
+#Mainstage .coupons-wrapper>a {
+  height: fit-content;
+}
+
+@media (max-width: 1000px) {
+  #Mainstage .info .coupons-wrapper {
+    flex-direction: column;
+  }
+}

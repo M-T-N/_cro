@@ -1,0 +1,64 @@
+.top-header {
+  .right-side {
+    position: fixed;
+    bottom: 63px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 3px solid #c4c4c4;
+  }
+}
+.bottom-header {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+}
+.left-area {
+  & .top-logo {
+    display: flex;
+    justify-content: center;
+    & img {
+      max-width: 150px !important;
+      max-height: 75px;
+      margin: 0 !important;
+    }
+  }
+  & .cta-ezbook {
+    background: #02ac1e;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    & a {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      & span {
+        text-align: center;
+        line-height: 1;
+        color: white;
+        font-family: Lato, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    }
+  }
+}
+.right-area {
+  & .nav-primary.menu-open {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    overflow: scroll;
+  }
+  & #mega-menu-wrap-primary_navigation {
+    padding-bottom: 0px !important;
+  }
+}
+@media (max-width: 1000px) {
+  _::-webkit-full-page-media,
+  _:future,
+  :root .safari_only {
+    padding-bottom: 30px; //resize 
+  }
+}

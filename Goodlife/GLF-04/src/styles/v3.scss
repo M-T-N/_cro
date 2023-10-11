@@ -1,0 +1,39 @@
+.tin-fabricPicker{
+  display: flex;
+  padding: 0 15px;
+  font-family: franklin-gothic-urw-cond;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+    width: 33.33%;
+    color: #fff;
+    cursor: pointer;
+    &.active {
+      outline: 5px solid #a4a4a4;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}
+.tin-filter {
+  &__clear {
+    padding: 15px 0;
+    & button {
+      padding: 20px 30px;
+      display: none;
+    }
+    &--active {
+      padding: 0;
+      & button {
+        display: inline-block;
+      }
+    }
+  }
+}
+.collection-filter-group--fabric {
+  display: none;
+}
