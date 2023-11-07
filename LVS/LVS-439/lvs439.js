@@ -37,6 +37,8 @@
 
 		// change link hrefs
 		document.querySelector('.mod-global-nav__suites a').href = 'https://www.venetianlasvegas.com/suites.html';
+		document.querySelector('.mod-global-nav__restaurants a').href = 'https://www.venetianlasvegas.com/restaurants.html';
+		document.querySelector('.mod-global-nav__entertainment a').href = 'https://www.venetianlasvegas.com/entertainment.html#pc=venetian:entertainment/shows';
 		document.querySelector('.mod-global-nav__pools-spa a').href = 'https://www.venetianlasvegas.com/home/pools-and-spa.html';
 		document.querySelector('.mod-global-nav__resort a').href = 'https://www.venetianlasvegas.com/home/resort.html';
 		document.querySelector('.mod-global-nav__meetings a').href = 'https://www.venetianlasvegas.com/home/meetings.html';
@@ -50,3 +52,20 @@
   poll('.mod-global-nav__thingstodo', init);
 
 })();
+
+
+
+
+
+
+
+
+
+
+// goals
+
+//control
+.mod-global-nav__suites .row a, .mod-global-nav__pools-spa .row a, .mod-global-nav__resort .row a, .mod-global-nav__meetings .row a, .mod-global-nav__casino .row a, .mod-global-nav__thingstodo .__cards a
+
+//v1
+.mod-suites-browse-listing__card-text a, .mod-editorial-grid__content-item a, .mod-editorial-grid__card--small a, .mod-tower-pathing__group-body-container a
